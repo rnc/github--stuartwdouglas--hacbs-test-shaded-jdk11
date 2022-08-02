@@ -4,14 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.stuartwdouglas.hacbs-test.simple</groupId>
-    <artifactId>simple-jdk8</artifactId>
-    <version>1.2.4</version>
-    <name>HACBS Test Simple JDK8</name>
+    <groupId>io.github.stuartwdouglas.hacbs-test.shaded</groupId>
+    <artifactId>shaded-jdk11</artifactId>
+    <version>999-SNAPSHOT</version>
+    <name>HACBS Shaded test JDK11</name>
     <description>Test data for HACBS JVM build service</description>
-    <url>https://github.com/stuartwdouglas/hacbs-test-simple-jdk8</url>
+    <url>https://github.com/stuartwdouglas/hacbs-test-shaded-jdk11</url>
     <scm>
-        <url>https://github.com/stuartwdouglas/hacbs-test-simple-jdk8</url>
+        <url>https://github.com/stuartwdouglas/hacbs-test-shaded-jdk11</url>
     </scm>
     <licenses>
         <license>
@@ -28,8 +28,8 @@
 
     <properties>
         <!-- We need JDK8 for such old bytecode -->
-        <maven.compiler.source>1.4</maven.compiler.source>
-        <maven.compiler.target>1.4</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
     <distributionManagement>
         <snapshotRepository>

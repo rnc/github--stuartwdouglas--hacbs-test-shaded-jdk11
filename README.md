@@ -1,4 +1,5 @@
 The repo contains a test build for HACBS. It tests the following:
 
-- JDK8 required
-- Tag in format 1_2_4_RELEASE
+- JDK11 required
+- simple-jdk8 shaded into the output
+- tag is incorrectly versioned with a SNAPSHOT version
