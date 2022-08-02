@@ -25,6 +25,13 @@
             <name>Stuart Douglas</name>
         </developer>
     </developers>
+    <dependencies>
+        <dependency>
+            <groupId>io.github.stuartwdouglas.hacbs-test.simple</groupId>
+            <artifactId>simple-jdk8</artifactId>
+            <version>1.2.4</version>
+        </dependency>
+    </dependencies>
 
     <properties>
         <!-- We need JDK8 for such old bytecode -->
@@ -39,6 +46,27 @@
     </distributionManagement>
     <build>
         <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <artifactSet>
+                                <includes>
+                                    <include>*</include>
+                                </includes>
+                            </artifactSet>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
